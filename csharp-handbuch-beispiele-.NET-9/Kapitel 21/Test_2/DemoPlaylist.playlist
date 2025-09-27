@@ -1,0 +1,53 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="CalculatorLibrary_Test" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="CalculatorLibrary_Test" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="CalculatorTest" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="CalculatorLibrary_Test.CalculatorTest.Test_Add" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_Add" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="CalculatorLibrary_Test.CalculatorTest.Test_Multiply" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_Multiply" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="CalculatorLibrary_Test.CalculatorTest.Test_Subtract" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_Subtract" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="UnitTest1" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="CalculatorLibrary_Test.UnitTest1.TestMethod1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TestMethod1" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

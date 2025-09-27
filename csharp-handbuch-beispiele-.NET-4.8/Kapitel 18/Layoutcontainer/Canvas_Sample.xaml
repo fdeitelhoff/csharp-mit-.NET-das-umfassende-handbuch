@@ -1,0 +1,20 @@
+﻿<Window x:Class="Layoutcontainer.Canvas_Sample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Layoutcontainer"
+        mc:Ignorable="d"
+        Title="Canvas_Sample" Height="200" Width="400">
+    <Canvas>
+        <Button Canvas.Left="25" Canvas.Right="35" Height="30">
+            Button1
+        </Button>
+        <Button Canvas.Left="55" Canvas.Top="50" Height="30" Width="80">
+            Button2
+        </Button>
+        <Button Canvas.Right="55" Canvas.Bottom="50" Height="30" Width="80">
+            Button3
+        </Button>
+    </Canvas>
+</Window>

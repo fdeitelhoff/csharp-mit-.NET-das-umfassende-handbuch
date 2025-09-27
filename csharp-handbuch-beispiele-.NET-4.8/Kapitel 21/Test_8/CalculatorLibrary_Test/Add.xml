@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Values>
+  <Value>
+    <Value1>20</Value1>
+    <Value2>60</Value2>
+    <Result>80</Result>
+  </Value>
+  <Value>
+    <Value1>-20</Value1>
+    <Value2>40</Value2>
+    <Result>20</Result>
+  </Value>
+  <Value>
+    <Value1>20</Value1>
+    <Value2>-60</Value2>
+    <Result>-40</Result>
+  </Value>
+</Values>

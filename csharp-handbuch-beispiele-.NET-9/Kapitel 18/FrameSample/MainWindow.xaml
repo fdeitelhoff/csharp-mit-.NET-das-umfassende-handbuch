@@ -1,0 +1,24 @@
+﻿<Window x:Class="FrameSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrameSample"
+        mc:Ignorable="d"
+        Title="Window mit Frame" Height="330" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Frame  Grid.Column="0" Source="Page1.xaml" NavigationUIVisibility="Visible" />
+        <StackPanel Grid.Column="1">
+            <Image Margin="10,10,10,10" Source="Koala.JPG" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Width="70" Margin="5">Pevious</Button>
+                <Button Width="70" Margin="0, 5, 5, 5">Next</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
+

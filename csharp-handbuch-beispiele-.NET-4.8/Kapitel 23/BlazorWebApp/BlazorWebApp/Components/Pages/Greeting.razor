@@ -1,0 +1,34 @@
+﻿@page "/Greeting/{id:int?}"
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+<h3>Hallo, @Name!</h3>
+
+<input @bind="Name" />
+
+<button @onclick="SagHallo">Klick mich</button>
+
+<button @onclick="ZeigePopup">Nachricht anzeigen</button>
+
+<p>@Nachricht</p>
+
+<p>@Id</p>
+
+@code {
+    public string Name { get; set; } = string.Empty;
+
+    [Parameter]
+    public int Id { get; set; }
+
+    private string Nachricht = "";
+
+    private void SagHallo()
+    {
+        Nachricht = "Max Mustermann";
+    }
+
+    private async Task ZeigePopup()
+    {
+        await JS.InvokeVoidAsync("zeigeNachricht", "Hallo von C#");
+    }
+}

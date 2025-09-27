@@ -1,0 +1,20 @@
+﻿<Window x:Class="Resource_with_Control.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resource_with_Control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="150" Width="320">
+    <Window.Resources>
+        <Image x:Key="image" Source="smiley.jpg"  />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Content="{StaticResource image}" />
+        <Button Grid.Column="1" Content="{StaticResource image}"/>
+    </Grid>
+</Window>

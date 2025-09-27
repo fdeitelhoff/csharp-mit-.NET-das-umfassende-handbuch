@@ -1,0 +1,26 @@
+﻿<Window x:Class="Converter_Sample2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Converter_Sample2"
+        mc:Ignorable="d"
+        Title="Converter_Sample2" Height="300" Width="600">
+    <Window.Resources>
+        <local:PathConverter x:Key="conv" />
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF916666" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lstDestinations" Margin="10" />
+        <Image Grid.Column="1" Width="300" Source="{Binding ElementName=lstDestinations, Path=SelectedItem, Converter={StaticResource conv}}" />
+    </Grid>
+</Window>

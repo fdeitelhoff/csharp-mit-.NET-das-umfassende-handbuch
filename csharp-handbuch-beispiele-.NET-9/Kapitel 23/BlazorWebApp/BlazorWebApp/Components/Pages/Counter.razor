@@ -1,0 +1,37 @@
+﻿@page "/counter"
+@using BlazorWebApp.Services
+@using Blazored.LocalStorage
+@inject CounterService CounterService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject AppStateService appStateService
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<h3>Globaler Zähler: @CounterService.Wert</h3>
+
+<button @onclick="CounterService.Increment">Erhöhen</button>
+
+@code {
+    private int currentCount = 0;
+
+    private async void IncrementCount()
+    {
+        currentCount++;
+
+        await localStorage.SetItemAsync("CurrentCounter", CounterService.Wert);
+    }
+
+    protected override void OnInitialized()
+    {
+        appStateService.OnChange += StateHasChanged;
+    }
+}
+
+

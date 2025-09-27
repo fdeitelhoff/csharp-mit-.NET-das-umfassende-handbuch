@@ -1,0 +1,19 @@
+﻿<Window x:Class="Layoutcontainer.WrapPanel_Sample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Layoutcontainer"
+        mc:Ignorable="d"
+        Title="WrapPanel_Sample" Height="450" Width="800">
+    <WrapPanel>
+        <Button Margin="10">Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+        <Button>Button 5</Button>
+        <Button>Button 6</Button>
+        <Button>Button 7</Button>
+    </WrapPanel>
+
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Sample8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sample8"
+        mc:Ignorable="d"
+       Title="Sample8" Height="150" Width="200">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.DoSomething" CanExecute="DoSomething_CanExecute" Executed="DoSomething_Executed" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="{x:Static local:CustomCommands.DoSomething}" Key="F1" Modifiers="Control" />
+    </Window.InputBindings>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Extras">
+                <MenuItem Command="local:CustomCommands.DoSomething" />
+            </MenuItem>
+        </Menu>
+
+        <Button Width="120" Height="35"
+                    Command="local:CustomCommands.DoSomething" 
+                    Content="{Binding Path=Command.Text, RelativeSource={RelativeSource self} }" />
+    </DockPanel>
+</Window>
+

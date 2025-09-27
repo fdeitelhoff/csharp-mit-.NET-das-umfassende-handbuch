@@ -1,0 +1,29 @@
+﻿@page "/form"
+@using System.ComponentModel.DataAnnotations
+@using BlazorWebApp.Model
+@rendermode InteractiveServer
+
+<h3>Formular</h3>
+
+<EditForm Model="@person" OnValidSubmit="Speichern">
+    <DataAnnotationsValidator />
+
+    <label for="name">Name:</label>
+    <InputText id="name" @bind-Value="person.Name" />
+    <ValidationMessage For="@(() => person.Name)" />
+
+    <label for="alter">Alter:</label>
+    <InputNumber id="alter" @bind-Value="person.Alter" />
+    <ValidationMessage For="@(() => person.Alter)" />
+
+    <button type="submit">Absenden</button>
+</EditForm>
+
+@code {
+    private Person person = new();
+
+    private void Speichern()
+    {
+        // Hier könnte der Eintrag gespeichert oder weiterverarbeitet werden
+    }
+}

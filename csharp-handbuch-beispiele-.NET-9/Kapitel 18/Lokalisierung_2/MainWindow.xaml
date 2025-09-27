@@ -1,0 +1,29 @@
+﻿<Window x:Class="Lokalisierung_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lokalisierung_2"
+        mc:Ignorable="d"
+        x:Uid="frm" Title="Mein Fenster" Height="110" Width="350">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD8F1F1" Offset="0"/>
+            <GradientStop Color="#FF70ABDC" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label x:Uid="label1" Margin="5, 0 10, 0" Content="Zuname" FontSize="12" />
+        <TextBox x:Uid="textbox1" Grid.Column="1" Margin="5" FontSize="12" Text="Deutscher Inhalt" />
+        <Button x:Uid="button1" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" Margin="5, 10, 5 12" Content="Akzeptieren" Width="80" Height="25" FontSize="12" />
+    </Grid>
+</Window>
+
